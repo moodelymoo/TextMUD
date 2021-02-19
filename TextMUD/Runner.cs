@@ -15,7 +15,7 @@ namespace TextMUD
         
         public void Diving()
         {
-            Console.WriteLine($"{Dave} Dave's, called {Name}");
+            Console.WriteLine($"{Dave} Dave's, called {Name.ToUpper()}");
         }
 
         public override string ToString()
