@@ -48,5 +48,3 @@
 - Skills
     - Special abilities, (ties into combat/damage system)
     - Skills either found as events or bought (ties into economy)
-
-
