@@ -20,7 +20,7 @@ namespace TextMUD
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"{Dave} Dave's, called {Name.ToUpper()}";
         }
     }
 }
