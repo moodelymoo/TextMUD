@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TextMUD.Beings.Objects
 {
     public class Inventory
     {
         private int _money;
-        private ArrayList _items;
-        private ArrayList _activeItems;
+        private List<Item> _items;
+        private List<Item> _activeItems;
 
 
-        public Inventory(int money, ArrayList items, ArrayList activeItems)
+        public Inventory(int money, List<Item> items, List<Item> activeItems)
         {
             _money = money;
             _items = items;
@@ -19,7 +20,7 @@ namespace TextMUD.Beings.Objects
         }
 
 
-        public ArrayList Items
+        public List<Item> Items
         {
             get => _items;
             set => _items = value;
@@ -31,7 +32,7 @@ namespace TextMUD.Beings.Objects
             set => _money = value;
         }
 
-        public ArrayList ActiveItems
+        public List<Item> ActiveItems
         {
             get => _activeItems;
             set => _activeItems = value;
@@ -41,7 +42,7 @@ namespace TextMUD.Beings.Objects
         {
             _activeItems.Insert(slot, item);
         }
-        
+
         public void AddPassiveItem(Item item, int slot)
         {
             _items.Insert(slot, item);
@@ -49,10 +50,17 @@ namespace TextMUD.Beings.Objects
 
         public override string ToString()
         {
-            /*TODO imp, should return name of eukaryote along with
-            a formatted grid with the active inv and then the inactive inv*/
-            
-            return base.ToString();
+            return $"{nameof(_activeItems)}:";
+        }
+
+        public string GetAllActiveInv()
+        {
+            return _activeItems.Aggregate("", (current, item) => current + $"{item}\n");
+        }
+
+        public string GetAllPassiveInv()
+        {
+            return _items.Aggregate("", (current, item) => current + $"{item}\n");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using TextMUD.Beings.Objects;
+﻿using System.Linq;
+using TextMUD.Beings.Objects;
 
 namespace TextMUD.Beings
 {
@@ -10,27 +11,33 @@ namespace TextMUD.Beings
         private bool _killable;
 
         protected Eukaryote(string name, Inventory inventory, int level, int hp, int stamina, int mana, int spirit,
-            bool killable, int physicalDefence, int spiritDef, int magicDef, int spiritAttack, int magicAttack,
-            int physicalAttack)
+            bool killable, int[] attack, int[] defence)
         {
             _name = name;
             _inventory = inventory;
             _killable = killable;
-            _stats = new[]
+            _stats = new int[]
             {
                 level,
                 hp,
                 stamina,
                 mana,
                 spirit,
-                physicalAttack,
-                magicAttack,
-                spiritAttack,
-                physicalDefence,
-                magicDef,
-                spiritDef
+                attack[0],
+                attack[1],
+                attack[2],
+                defence[0],
+                defence[1],
+                defence[2]
             };
         }
+
+        protected Eukaryote(string name, int level, int[] attack, int[] defence)
+        {
+            //for genning level specific eukaryotes
+            throw new System.NotImplementedException();
+        }
+
 
         public string Name
         {
@@ -64,7 +71,11 @@ namespace TextMUD.Beings
                    $"Physical:\t Attack: {_stats[5]}\t Defence: {_stats[8]}\t \n" +
                    $"Magical:\t Attack: {_stats[6]}\t Defence: {_stats[9]}\t \n" +
                    $"Spirit:\t\t Attack: {_stats[7]}\t Defence: {_stats[10]}\t \n\n" +
-                   $"Killable: {_killable}";
+                   $"Killable: {_killable}\n\n" +
+                   $"Active Inventory:\n" +
+                   $"{_inventory.GetAllActiveInv()}\n" +
+                   $"Passive Inventory:\n" +
+                   $"{_inventory.GetAllPassiveInv()}";
         }
     }
 }

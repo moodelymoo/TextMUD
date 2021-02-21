@@ -4,9 +4,10 @@ namespace TextMUD.Beings.Implementations
 {
     public class Trader : Eukaryote
     {
-        public Trader(string name, Inventory inventory, int level, int hp, int stamina, int mana, int spirit, bool killable, int physicalDefence, int spiritDef, int magicDef, int spiritAttack, int magicAttack, int physicalAttack) : base(name, inventory, level, hp, stamina, mana, spirit, killable, physicalDefence, spiritDef, magicDef, spiritAttack, magicAttack, physicalAttack)
+        public Trader(string name, Inventory inventory, int level, int hp, int stamina, int mana, int spirit,
+            bool killable, int[] attack, int[] defence) : base(name, inventory, level, hp, stamina, mana, spirit,
+            killable, attack, defence)
         {
-            
         }
     }
 }
