@@ -6,14 +6,10 @@ namespace TextMUD.FileIO.SaveGameHandle
 {
     public class SaveGenerator
     {
-        public SaveGenerator()
-        {
-            
-        }
         //TODO imp, should generate and write, at the bare minimum; the player data into a json file, including all
         // inventory contents 
 
-        public void Save(Eukaryote player)
+        public static void Save(Eukaryote player)
         {
             string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\Jsons\"+ $"{player.Name}";
             //make json indented and pretty

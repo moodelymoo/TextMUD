@@ -10,6 +10,7 @@ namespace TextMUD
 {
     internal static class Program
     {
+        // ReSharper disable once UnusedParameter.Local
         private static void Main(string[] args)
         {
             Trader trader = new Trader("Bob", new Inventory(
@@ -40,18 +41,16 @@ namespace TextMUD
                 new[] {5, 5, 5}, new[] {10, 10, 10}
             );
             Console.WriteLine(trader.ToString());
-
-            SaveGenerator saveGenerator = new SaveGenerator();
-            saveGenerator.Save(monster);
             
+            SaveGenerator.Save(monster);
             Console.WriteLine("Save Successful");
-
-            SaveLoader saveLoader = new SaveLoader();
-            Monster monster2 = saveLoader.Load("Sean");
+            
+            Eukaryote monster2 = SaveLoader.Load("Sean");
             
             Console.WriteLine(monster2.ToString());
         }
 
+        // ReSharper disable once UnusedMember.Local
         private static void GameLoop()
         {
             Console.WriteLine("this should be the game loop containing the super high level logic");
