@@ -33,10 +33,40 @@ namespace TextMUD.LootHandler
             _damage = damage;
             _defence = defence;
         }
-        
+
+        public string Name
+        {
+            get => _name;
+            set => _name = value;
+        }
+
+        public int Level
+        {
+            get => _level;
+            set => _level = value;
+        }
+
+        public int[] Damage
+        {
+            get => _damage;
+            set => _damage = value;
+        }
+
+        public int[] Defence
+        {
+            get => _defence;
+            set => _defence = value;
+        }
+
+        public string SpecialAbility
+        {
+            get => _specialAbility;
+            set => _specialAbility = value;
+        }
+
         public override string ToString()
         {
-            return $"{_name}, TODO, format this output in item.cs";
+            return $"{Name}, TODO, format this output in item.cs";
         }
     }
 }
