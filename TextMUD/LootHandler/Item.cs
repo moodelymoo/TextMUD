@@ -4,19 +4,13 @@ namespace TextMUD.LootHandler
 {
     public struct Item
     {
-        private string _name;
-        private int _level;
-        private int[] _damage;
-        private int[] _defence;
-        private string _specialAbility;
-
         public Item(string name, int level, int[] damage, int[] defence, string specialAbility)
         {
-            _name = name;
-            _level = level;
-            _damage = damage;
-            _defence = defence;
-            _specialAbility = specialAbility;
+            Name = name;
+            Level = level;
+            Damage = damage;
+            Defence = defence;
+            SpecialAbility = specialAbility;
         }
 
         public Item(string name, int level, int[] damage, int[] defence) : this()
@@ -28,41 +22,21 @@ namespace TextMUD.LootHandler
                                             $"Damage: {damage.Length}\n" +
                                             $"Defence: {defence.Length}");
 
-            _name = name;
-            _level = level;
-            _damage = damage;
-            _defence = defence;
+            Name = name;
+            Level = level;
+            Damage = damage;
+            Defence = defence;
         }
 
-        public string Name
-        {
-            get => _name;
-            set => _name = value;
-        }
+        public string Name { get; set; }
 
-        public int Level
-        {
-            get => _level;
-            set => _level = value;
-        }
+        public int Level { get; set; }
 
-        public int[] Damage
-        {
-            get => _damage;
-            set => _damage = value;
-        }
+        public int[] Damage { get; set; }
 
-        public int[] Defence
-        {
-            get => _defence;
-            set => _defence = value;
-        }
+        public int[] Defence { get; set; }
 
-        public string SpecialAbility
-        {
-            get => _specialAbility;
-            set => _specialAbility = value;
-        }
+        public string SpecialAbility { get; set; }
 
         public override string ToString()
         {
