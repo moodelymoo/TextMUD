@@ -22,7 +22,7 @@ namespace TextMUD.FileIO.SaveGameHandle
                 WriteIndented = true,
             };
             //Serialise to Json format
-            string playerData = JsonSerializer.Serialize(player);
+            string playerData = JsonSerializer.Serialize(player, options);
             //Write to file
             File.WriteAllText(path, playerData);
         }

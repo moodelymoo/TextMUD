@@ -41,13 +41,13 @@ namespace TextMUD
             );
             Console.WriteLine(trader.ToString());
 
-            // SaveGenerator saveGenerator = new SaveGenerator();
-            // saveGenerator.Save(monster);
-            //
-            // Console.WriteLine("Save Successful");
+            SaveGenerator saveGenerator = new SaveGenerator();
+            saveGenerator.Save(monster);
+            
+            Console.WriteLine("Save Successful");
 
             SaveLoader saveLoader = new SaveLoader();
-            Monster monster2 = SaveLoader.Load("Sean");
+            Monster monster2 = saveLoader.Load("Sean");
             
             Console.WriteLine(monster2.ToString());
         }

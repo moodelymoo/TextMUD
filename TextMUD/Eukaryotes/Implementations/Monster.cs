@@ -8,10 +8,16 @@ namespace TextMUD.Eukaryotes.Implementations
 {
     public class Monster : Eukaryote
     {
-        [JsonConstructorAttribute]
+        [JsonConstructor]
+        public Monster()
+        {
+            
+        }
+        
+        
         public Monster(string name, Inventory inventory, int level, int hp, int stamina, int mana, int spirit,
-            bool killable, int[] attack, int[] defence) : base(name, inventory, level, hp, stamina, mana, spirit,
-            killable, attack, defence)
+            bool killable, IReadOnlyList<int> attack, IReadOnlyList<int> defence) : base(name, inventory, level, hp,
+            stamina, mana, spirit, killable, attack, defence)
         {
             
         }
