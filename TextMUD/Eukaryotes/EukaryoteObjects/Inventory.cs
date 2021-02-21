@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using TextMUD.LootHandler;
 
-namespace TextMUD.Beings.Objects
+namespace TextMUD.Eukaryotes.EukaryoteObjects
 {
     public class Inventory
     {

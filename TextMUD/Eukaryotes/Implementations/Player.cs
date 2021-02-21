@@ -1,6 +1,6 @@
-﻿using TextMUD.Beings.Objects;
+﻿using TextMUD.Eukaryotes.EukaryoteObjects;
 
-namespace TextMUD.Beings.Implementations
+namespace TextMUD.Eukaryotes.Implementations
 {
     public class Player : Eukaryote
     {
@@ -8,6 +8,7 @@ namespace TextMUD.Beings.Implementations
             bool killable, int[] attack, int[] defence) : base(name, inventory, level, hp, stamina, mana, spirit,
             killable, attack, defence)
         {
+            
         }
     }
 }

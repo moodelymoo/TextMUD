@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TextMUD.Beings.Objects
+namespace TextMUD.LootHandler
 {
     public struct Item
     {
@@ -21,6 +21,7 @@ namespace TextMUD.Beings.Objects
 
         public Item(string name, int level, int[] damage, int[] defence) : this()
         {
+            // checking lengths of 
             if (damage.Length != 3 || defence.Length != 3)
                 throw new ArgumentException($"both damage and defence arguments must contain " +
                                             $"3 items, currently contain\n " +
