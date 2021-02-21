@@ -7,8 +7,6 @@ namespace TextMUD.FileIO.SaveGameHandle
 {
     public class SaveLoader
     {
-        // TODO imp, should import from a json file given a player name
-
         public static Eukaryote Load(string name)
         {
             string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\Jsons\" + name;

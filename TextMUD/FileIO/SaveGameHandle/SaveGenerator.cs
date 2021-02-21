@@ -4,11 +4,8 @@ using TextMUD.Eukaryotes;
 
 namespace TextMUD.FileIO.SaveGameHandle
 {
-    public class SaveGenerator
+    public static class SaveGenerator
     {
-        //TODO imp, should generate and write, at the bare minimum; the player data into a json file, including all
-        // inventory contents 
-
         public static void Save(Eukaryote player)
         {
             string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\Jsons\"+ $"{player.Name}";
