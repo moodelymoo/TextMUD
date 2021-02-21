@@ -10,7 +10,7 @@ namespace TextMUD.Beings
         private bool _killable;
 
         protected Eukaryote(string name, Inventory inventory, int level, int hp, int stamina, int mana, int spirit,
-            bool killable, int defence, int spiritDef, int magicDef, int spiritAttack, int magicAttack,
+            bool killable, int physicalDefence, int spiritDef, int magicDef, int spiritAttack, int magicAttack,
             int physicalAttack)
         {
             _name = name;
@@ -26,7 +26,7 @@ namespace TextMUD.Beings
                 physicalAttack,
                 magicAttack,
                 spiritAttack,
-                defence,
+                physicalDefence,
                 magicDef,
                 spiritDef
             };
@@ -58,7 +58,13 @@ namespace TextMUD.Beings
 
         public override string ToString()
         {
-            return $"{nameof(_name)}: {_name}, {nameof(_inventory)}: {_inventory}, {nameof(_stats)}: {_stats}, {nameof(_killable)}: {_killable}";
+            return "Player Stat Sheet\n".ToUpper() +
+                   $"Name: {_name}\t Money: {_inventory.Money} \t Level: {_stats[0]}\n" +
+                   $"Hp: {_stats[1]}\t\t Stamina: {_stats[2]}\t Mana: {_stats[3]}\t\t \n" +
+                   $"Physical:\t Attack: {_stats[5]}\t Defence: {_stats[8]}\t \n" +
+                   $"Magical:\t Attack: {_stats[6]}\t Defence: {_stats[9]}\t \n" +
+                   $"Spirit:\t\t Attack: {_stats[7]}\t Defence: {_stats[10]}\t \n\n" +
+                   $"Killable: {_killable}";
         }
     }
 }
