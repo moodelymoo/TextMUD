@@ -31,17 +31,15 @@ namespace TextMUD.Eukaryotes
         {
             // required for Json file loading
         }
-
-
-        public string Name { get; set; }
         
+        public string Name { get; set; }
+
         public Inventory Inventory { get; set; }
 
         public int[] Stats { get; set; }
 
         public bool Killable { get; set; }
-
-
+        
         public override string ToString()
         {
             return "Player Stat Sheet\n".ToUpper() +
