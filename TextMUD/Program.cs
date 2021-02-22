@@ -54,7 +54,6 @@ namespace TextMUD
         private static void GameLoop()
         {
             Console.WriteLine("this should be the game loop containing the super high level logic");
-
         }
     }
 }

@@ -6,8 +6,6 @@ namespace TextMUD.Eukaryotes.Implementations
 {
     public class Trader : Eukaryote
     {
-        
-
         [JsonConstructor]
         public Trader()
         {

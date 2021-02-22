@@ -48,3 +48,7 @@
 - Skills
     - Special abilities, (ties into combat/damage system)
     - Skills either found as events or bought (ties into economy)
+
+- World Generation
+    - RNG and set rooms
+    - Path and rooms are stored so you can backtrack as needed
