@@ -1,0 +1,54 @@
+﻿{
+  "Name": "Sean",
+  "Inventory": {
+    "Items": [
+      {
+        "Name": "Passive Inv of Power",
+        "Level": 1,
+        "Damage": [
+          2,
+          1,
+          1
+        ],
+        "Defence": [
+          7,
+          4,
+          4
+        ],
+        "SpecialAbility": null
+      }
+    ],
+    "Money": 0,
+    "ActiveItems": [
+      {
+        "Name": "Shield of Power",
+        "Level": 0,
+        "Damage": [
+          5,
+          2,
+          2
+        ],
+        "Defence": [
+          10,
+          3,
+          3
+        ],
+        "SpecialAbility": null
+      }
+    ]
+  },
+  "Stats": [
+    1,
+    10,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    10,
+    10,
+    10
+  ],
+  "Killable": true
+}
