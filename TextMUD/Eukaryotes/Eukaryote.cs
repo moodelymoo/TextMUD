@@ -54,5 +54,21 @@ namespace TextMUD.Eukaryotes
                    $"Passive Inventory:\n" +
                    $"{Inventory.GetAllPassiveInv()}";
         }
+
+        public string AlternateStatSheet()
+        {
+            return "Player Stat Sheet\n".ToUpper() +
+                   $"Name: {Name}\t Money: {Inventory.Money} \t Level: {Stats[0]}\n" +
+                   $"Hp: {Stats[1]}\t\t Stamina: {Stats[2]}\t Mana: {Stats[3]}\t\t \n" +
+                   $"\t\t Attack\t\t Defence\n" +
+                   $"Physical:\t {Stats[5]}\t\t {Stats[8]}\t \n" +
+                   $"Magical:\t {Stats[6]}\t\t {Stats[9]}\t \n" +
+                   $"Spirit:\t\t {Stats[7]}\t\t {Stats[10]}\t \n\n" +
+                   $"Killable: {Killable}\n\n" +
+                   $"Active Inventory:\n" +
+                   $"{Inventory.GetAllActiveInv()}\n" +
+                   $"Passive Inventory:\n" +
+                   $"{Inventory.GetAllPassiveInv()}";
+        }
     }
 }
