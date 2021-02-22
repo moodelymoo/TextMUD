@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Jsons" />
+      <Folder Include="Loggers" />
     </ItemGroup>
 
 </Project>

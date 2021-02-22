@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TextMUD.LootHandler;
+using TextMUD.MiscObjects;
 
 namespace TextMUD.Eukaryotes.EukaryoteObjects
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using TextMUD.Eukaryotes.EukaryoteObjects;
-using TextMUD.LootHandler;
+using TextMUD.MiscObjects;
 
 namespace TextMUD.FightHandler
 {

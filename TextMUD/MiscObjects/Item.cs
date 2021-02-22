@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TextMUD.LootHandler
+namespace TextMUD.MiscObjects
 {
     public struct Item
     {

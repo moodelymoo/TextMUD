@@ -4,11 +4,11 @@ using TextMUD.Eukaryotes;
 using TextMUD.Eukaryotes.EukaryoteObjects;
 using TextMUD.Eukaryotes.Implementations;
 using TextMUD.FileIO.SaveGameHandle;
-using TextMUD.LootHandler;
+using TextMUD.MiscObjects;
 
 namespace TextMUD
 {
-    internal static class Program
+    internal static class RunGame
     {
         // ReSharper disable once UnusedParameter.Local
         private static void Main(string[] args)

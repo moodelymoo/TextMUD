@@ -8,7 +8,7 @@ namespace TextMUD.FileIO.SaveGameHandle
     {
         public static void Save(Eukaryote player)
         {
-            string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\Jsons\"+ $"{player.Name}.json";
+            string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\FileIO\Jsons\"+ $"{player.Name}.json";
             //make json indented and pretty
             var options = new JsonSerializerOptions
             {

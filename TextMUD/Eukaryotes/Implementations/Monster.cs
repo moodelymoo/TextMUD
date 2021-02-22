@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using TextMUD.Eukaryotes.EukaryoteObjects;
-using TextMUD.LootHandler;
+using TextMUD.MiscObjects;
 
 
 namespace TextMUD.Eukaryotes.Implementations
