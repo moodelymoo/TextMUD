@@ -6,7 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Loggers" />
+      <PackageReference Include="Serilog" Version="2.10.0" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0-dev-00839" />
+      <PackageReference Include="Serilog.Sinks.File" Version="5.0.0-dev-00909" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Loggers\Logs" />
     </ItemGroup>
 
 </Project>
