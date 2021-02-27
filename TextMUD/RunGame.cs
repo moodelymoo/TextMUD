@@ -61,6 +61,8 @@ namespace TextMUD
             Eukaryote monster2 = SaveLoader.Load("Sean");
             
             Console.WriteLine(monster2.ToString());
+            
+            monster.Logging();
         }
 
         // ReSharper disable once UnusedMember.Local
