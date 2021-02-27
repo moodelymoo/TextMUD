@@ -17,6 +17,8 @@ namespace TextMUD
         // ReSharper disable once UnusedParameter.Local
         private static void Main(string[] args)
         {
+            // Setup logger - should work project wide
+            // Before release, change min logging level to Information(pref)/Error
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.Console()
@@ -24,7 +26,7 @@ namespace TextMUD
                     rollingInterval: RollingInterval.Day)
                 .CreateLogger();
             
-            Log.Logger.Debug(nameof(TextMUD));
+            Log.Logger.Debug($"Written from: {nameof(Main)}");
 
             Trader trader = new Trader("Bob", new Inventory(
                     0,

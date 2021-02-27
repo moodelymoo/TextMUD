@@ -74,7 +74,8 @@ namespace TextMUD.Eukaryotes
 
         public void Logging()
         {
-            Log.Logger.Information($"this is written from {GetType().Name}");
+            Log.Logger.Debug($"Written from: {GetType().Name}");
+            Log.CloseAndFlush();
         }
     }
 }
