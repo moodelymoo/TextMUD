@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Serilog;
 using TextMUD.MiscObjects;
 
 namespace TextMUD.Eukaryotes.EukaryoteObjects
@@ -28,6 +29,7 @@ namespace TextMUD.Eukaryotes.EukaryoteObjects
         public void AddPassiveItem(Item item, int slot)
         {
             Items.Insert(slot, item);
+            Log.Logger.Debug($"{item} added to {GetType().Namespace}");
         }
 
         public override string ToString()

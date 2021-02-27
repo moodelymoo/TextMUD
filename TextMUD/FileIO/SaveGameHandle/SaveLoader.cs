@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text.Json;
+using Serilog;
 using TextMUD.Eukaryotes;
 using TextMUD.Eukaryotes.Implementations;
 
@@ -12,8 +13,11 @@ namespace TextMUD.FileIO.SaveGameHandle
             string path = @"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\FileIO\Jsons\" + $"{name}.json";
             //get data from path
             string data = File.ReadAllText(path);
-            //return as deserialized object
-            return JsonSerializer.Deserialize<Monster>(data);
+            // deserialize object
+            var tmp = JsonSerializer.Deserialize<Monster>(data);
+            Log.Logger.Debug($"Load from \"{path}\" successful");
+            //return
+            return tmp;
         }
     }
 }

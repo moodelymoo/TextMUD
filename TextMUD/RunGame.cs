@@ -25,8 +25,19 @@ namespace TextMUD
                     rollingInterval: RollingInterval.Day)
                 .CreateLogger();
             
-            Log.Logger.Debug($"Written from: {nameof(Main)}");
+            // Manual test code
+            TestEukaryote();
+        }
 
+        // ReSharper disable once UnusedMember.Local
+        private static void GameLoop()
+        {
+            Console.WriteLine("this should be the game loop containing the super high level logic");
+        }
+
+        private static void TestEukaryote()
+        {
+            // ReSharper disable once UnusedVariable
             Trader trader = new Trader("Bob", new Inventory(
                     0,
                     new List<Item>
@@ -54,22 +65,12 @@ namespace TextMUD
                 1, 10, 5, 5, 5, true,
                 new[] {5, 5, 5}, new[] {10, 10, 10}
             );
-            Console.WriteLine(trader.ToString());
-            
-            SaveGenerator.Save(monster);
-            Console.WriteLine("Save Successful");
-            
-            Eukaryote monster2 = SaveLoader.Load("Sean");
-            
-            Console.WriteLine(monster2.ToString());
-            
-            monster.Logging();
-        }
 
-        // ReSharper disable once UnusedMember.Local
-        private static void GameLoop()
-        {
-            Console.WriteLine("this should be the game loop containing the super high level logic");
+            SaveGenerator.Save(monster);
+            
+            // Test importing and object conversion from a json file
+            // ReSharper disable once UnusedVariable
+            Eukaryote monster2 = SaveLoader.Load("Sean");
         }
     }
 }

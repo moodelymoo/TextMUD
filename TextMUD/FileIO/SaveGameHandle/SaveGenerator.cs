@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text.Json;
+using Serilog;
 using TextMUD.Eukaryotes;
 
 namespace TextMUD.FileIO.SaveGameHandle
@@ -18,6 +19,7 @@ namespace TextMUD.FileIO.SaveGameHandle
             string playerData = JsonSerializer.Serialize(player, options);
             //Write to file
             File.WriteAllText(path, playerData);
+            Log.Logger.Debug($"Save to \"{path}\" successful");
         }
     }
 }
