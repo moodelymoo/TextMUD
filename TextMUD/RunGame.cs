@@ -38,7 +38,7 @@ namespace TextMUD
         private static void TestEukaryote()
         {
             // ReSharper disable once UnusedVariable
-            Trader trader = new Trader("Bob", new Inventory(
+            Eukaryote trader = new Trader("Bob", new Inventory(
                     0,
                     new List<Item>
                     {
@@ -52,7 +52,7 @@ namespace TextMUD
                 new[] {5, 5, 5}, new[] {10, 10, 10}
             );
             
-            Monster monster = new Monster("Sean", new Inventory(
+            Eukaryote monster = new Monster("Sean", new Inventory(
                     0,
                     new List<Item>
                     {
