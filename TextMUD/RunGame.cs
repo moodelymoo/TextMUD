@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Emit;
 using TextMUD.Eukaryotes;
 using TextMUD.Eukaryotes.EukaryoteObjects;
 using TextMUD.Eukaryotes.Implementations;
