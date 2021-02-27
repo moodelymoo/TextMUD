@@ -9,7 +9,7 @@ namespace TextMUD.FightHandler
 
         public List<Item> GenLootOnDeath(Inventory inventory)
         {
-            //TODO imp, make it so that it returns some random items, number scaled with level
+            //TODO imp, make it so that it returns some random items, number scaled with level and so on...
             return inventory.ActiveItems;
         }
     }
