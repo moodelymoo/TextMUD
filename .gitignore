@@ -230,4 +230,4 @@ project.lock.json
 # same as with the jsons, but for the logs, again keeping an example
 /TextMUD/Loggers/Logs/
 # example log file
-!*TextMUD/Loggers/Logs/TextMUDExapleLog.txt
+!*TextMUD/Loggers/Logs/TextMUDExampleLog.txt
