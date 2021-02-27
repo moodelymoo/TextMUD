@@ -19,7 +19,7 @@ namespace TextMUD.FileIO.SaveGameHandle
             string playerData = JsonSerializer.Serialize(player, options);
             //Write to file
             File.WriteAllText(path, playerData);
-            Log.Logger.Debug($"Save to \"{path}\" successful");
+            Log.Logger.Information($"Save to \"{path}\" successful");
         }
     }
 }

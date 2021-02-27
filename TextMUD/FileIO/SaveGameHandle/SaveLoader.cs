@@ -15,7 +15,7 @@ namespace TextMUD.FileIO.SaveGameHandle
             string data = File.ReadAllText(path);
             // deserialize object
             var tmp = JsonSerializer.Deserialize<Monster>(data);
-            Log.Logger.Debug($"Load from \"{path}\" successful");
+            Log.Logger.Information($"Load from \"{path}\" successful");
             //return
             return tmp;
         }
