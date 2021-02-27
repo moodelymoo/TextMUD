@@ -223,5 +223,11 @@ project.lock.json
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
+# ignore the jsons generated
 *TextMUD/FileIO/Jsons/
+# make sure that there is an example json file to show the structure required
 !*TextMUD/FileIO/Jsons/EukaryoteExample.json
+# same as with the jsons, but for the logs, again keeping an example
+/TextMUD/Loggers/Logs/
+# example log file
+!*TextMUD/Loggers/Logs/TextMUDExapleLog.txt

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Serilog;
 using TextMUD.Eukaryotes.EukaryoteObjects;
 
 namespace TextMUD.Eukaryotes
@@ -69,6 +70,12 @@ namespace TextMUD.Eukaryotes
                    $"{Inventory.GetAllActiveInv()}\n" +
                    $"Passive Inventory:\n" +
                    $"{Inventory.GetAllPassiveInv()}";
+        }
+
+        public void Logging()
+        {
+            Log.Logger.Debug($"Written from: {GetType().Name}");
+            Log.CloseAndFlush();
         }
     }
 }

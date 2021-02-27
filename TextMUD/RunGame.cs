@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using TextMUD.Eukaryotes;
 using TextMUD.Eukaryotes.EukaryoteObjects;
 using TextMUD.Eukaryotes.Implementations;
 using TextMUD.FileIO.SaveGameHandle;
 using TextMUD.MiscObjects;
+using Serilog;
+
+
 
 namespace TextMUD
 {
@@ -13,6 +17,17 @@ namespace TextMUD
         // ReSharper disable once UnusedParameter.Local
         private static void Main(string[] args)
         {
+            // Setup logger - should work project wide
+            // Before release, change min logging level to Information(pref)/Error
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.File(@$"C:\Users\Peter\RiderProjects\TextMUD\TextMUD\Loggers\Logs\{nameof(TextMUD)}.txt",
+                    rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+            
+            Log.Logger.Debug($"Written from: {nameof(Main)}");
+
             Trader trader = new Trader("Bob", new Inventory(
                     0,
                     new List<Item>
@@ -48,6 +63,8 @@ namespace TextMUD
             Eukaryote monster2 = SaveLoader.Load("Sean");
             
             Console.WriteLine(monster2.ToString());
+            
+            monster.Logging();
         }
 
         // ReSharper disable once UnusedMember.Local

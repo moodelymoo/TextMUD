@@ -1,0 +1,13 @@
+2021-02-27 16:57:22.028 +00:00 [DBG] TextMUD
+2021-02-27 17:01:15.908 +00:00 [DBG] TextMUD
+2021-02-27 17:01:16.020 +00:00 [INF] this is written from Monster
+2021-02-27 17:19:15.627 +00:00 [DBG] TextMUD
+2021-02-27 17:19:15.757 +00:00 [DBG] this is written from Monster
+2021-02-27 17:21:53.853 +00:00 [DBG] GetType
+2021-02-27 17:21:53.970 +00:00 [DBG] this is written from Monster
+2021-02-27 17:24:16.962 +00:00 [DBG] Main
+2021-02-27 17:24:17.071 +00:00 [DBG] this is written from Monster
+2021-02-27 17:24:42.698 +00:00 [DBG] written from: Main
+2021-02-27 17:24:42.803 +00:00 [DBG] this is written from Monster
+2021-02-27 17:25:11.469 +00:00 [DBG] Written from: Main
+2021-02-27 17:25:11.581 +00:00 [DBG] Written from: Monster

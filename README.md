@@ -53,3 +53,7 @@
 - World Generation
     - RNG and set rooms
     - Path and rooms are stored so you can backtrack as needed
+    
+### Information
+Uses Serilog, installation/setup info here:
+https://github.com/serilog/serilog/wiki/Getting-Started
